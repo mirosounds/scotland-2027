@@ -497,13 +497,10 @@
 
 <script>
 /* ============================================================
-   GA4 Measurement ID: dedicated stream for this proposal.
-   Placeholder below -- create a new web stream under the Miro
-   Sounds GA4 Property and paste its Measurement ID in before
-   publishing (both here and nowhere else -- this is the only
-   place it's referenced).
+   GA4 Measurement ID: same stream this proposal used before
+   (carried over from the original Scotland file).
    ============================================================ */
-const GA_MEASUREMENT_ID = 'G-XXXXXXXXXX';
+const GA_MEASUREMENT_ID = 'G-FRMS66W3JP';
 window.dataLayer = window.dataLayer || [];
 function gtag(){ dataLayer.push(arguments); }
 (function(){
@@ -521,12 +518,12 @@ function trackEvent(name, params){
 
 /* ============================================================
    SUBMIT_ENDPOINT: the existing shared Miro Sounds tracking
-   sheet (Google Apps Script Web App). Paste the live URL in
-   before publishing -- submissions are tagged with `proposal:
-   'scotland-2027'` below so they're identifiable in the shared
-   sheet alongside the other proposals.
+   sheet (Google Apps Script Web App) -- same endpoint used by
+   the other current proposals. Submissions are tagged with
+   `proposal: 'scotland-2027'` below so they're identifiable in
+   the shared sheet alongside the other proposals.
    ============================================================ */
-const SUBMIT_ENDPOINT = '';
+const SUBMIT_ENDPOINT = 'https://script.google.com/macros/s/AKfycbzUdRZCseWxOLPTHE1aTlfwqiRebE91H2glPmBAA3I9eDtvQ4tZG8Gt_3nMB2NT9mor/exec';
 
 function submitToEndpoint(payload){
   if (!SUBMIT_ENDPOINT) return;
