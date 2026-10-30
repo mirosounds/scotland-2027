@@ -218,6 +218,9 @@
   .terms-accordion summary:hover{ color:var(--maroon-bright); }
   .terms-accordion summary svg{ flex-shrink:0; transition:transform 0.2s ease; }
   .terms-accordion[open] summary svg{ transform:rotate(180deg); }
+  .longlist-collapse{ margin:30px 0 10px; }
+  .longlist-collapse .longlist-body{ padding:0 18px 18px; }
+  .longlist-collapse .longlist-body > .section-title:first-child{ margin-top:10px; }
   .terms-accordion > ul.next-steps-list{ margin:0; padding:2px 20px 12px; }
   .artist-more{ margin:0 0 18px; }
   .artist-more summary{ font-size:0.92rem; padding:11px 16px; }
@@ -447,19 +450,42 @@
 <div class="wrap">
 
   <div class="hero">
-    <p class="update-note"><strong>Updated October 2026:</strong> Friday shortlist now below. <a href="#shortlist">Jump to shortlist</a></p>
-    <p class="lede">Following the initial longlist, the Friday welcome party shortlist is now below, with each artist available and on hold unless noted. The ambition remains to work with the best artists, composers and collaborators (Scottish wherever relevant), to curate exceptional entertainment that feels authentic, unique to this wedding, and perfectly suited to the setting and the couple. The original longlist follows further down for reference.</p>
+    <p class="update-note"><strong>Updated 30 October 2026:</strong> Shortlists now below for both days. <a href="#shortlist">Friday Wedding Day</a> &middot; <a href="#saturday-shortlist">Saturday Solstice Party</a></p>
+    <p class="lede">Following the initial longlist, shortlists for the Friday Wedding Day and Saturday Solstice Party are now below, with each artist's availability noted. The ambition remains to work with the best artists, composers and collaborators (Scottish wherever relevant), to curate exceptional entertainment that feels authentic, unique to this wedding, and perfectly suited to the setting and the couple. The original longlist and ideas remain available below the shortlists, for reference.</p>
   </div>
 
   <div class="divider" aria-hidden="true"><span class="wave"><span class="bar" style="height:10px;"></span><span class="bar" style="height:18px;"></span><span class="bar" style="height:26px;"></span><span class="bar" style="height:14px;"></span><span class="bar" style="height:22px;"></span><span class="bar" style="height:10px;"></span><span class="bar" style="height:18px;"></span><span class="bar" style="height:26px;"></span><span class="bar" style="height:14px;"></span><span class="bar" style="height:10px;"></span></span></div>
 
-  <h2 class="section-title" id="shortlist">Friday - Shortlist</h2>
-  <p class="cat-intro">Shortlisted artists for the welcome party, with further detail and videos for each below.</p>
-  <div id="shortlist-moments"></div>
+  <h2 class="section-title" id="shortlist">Friday 18th June - Wedding Day</h2>
+  <p class="cat-intro">Shortlisted artists for the guest arrival and reception, with further detail and videos for each below.</p>
+  <div id="shortlist-friday"></div>
+
 
   <div class="divider" aria-hidden="true"><span class="wave"><span class="bar" style="height:10px;"></span><span class="bar" style="height:18px;"></span><span class="bar" style="height:26px;"></span><span class="bar" style="height:14px;"></span><span class="bar" style="height:22px;"></span><span class="bar" style="height:10px;"></span><span class="bar" style="height:18px;"></span><span class="bar" style="height:26px;"></span><span class="bar" style="height:14px;"></span><span class="bar" style="height:10px;"></span></span></div>
 
-  <h2 class="section-title" id="friday">Friday - Original Longlist</h2>
+  <h2 class="section-title" id="saturday-shortlist">Saturday 19th June - Solstice Party</h2>
+  <p class="cat-intro">Shortlisted artists for the Solstice Party, with further detail and videos for each below.</p>
+  <div id="shortlist-saturday"></div>
+
+  <details class="terms-accordion longlist-collapse" id="original-longlist">
+    <summary>Original longlist &amp; ideas <svg width="12" height="12" viewBox="0 0 10 10" aria-hidden="true"><path d="M1 3 L5 7 L9 3" stroke="currentColor" stroke-width="1.4" fill="none"/></svg></summary>
+    <div class="longlist-body">
+
+  <h2 class="section-title" id="saturday">Wedding Day - Original Ideas</h2>
+  <p class="cat-intro">The wedding day offers a number of distinct moments for music and entertainment. Below is an initial collection of ideas and directions - some overlapping with the Solstice Party concepts, others intended as inspiration for the ceremony, reception and celebrations that follow.</p>
+
+  <div class="table-scroll">
+    <div class="overview-table" id="saturday-overview"></div>
+  </div>
+
+  <div id="moments"></div>
+
+
+
+  
+  <div class="divider" aria-hidden="true"><span class="wave"><span class="bar" style="height:10px;"></span><span class="bar" style="height:18px;"></span><span class="bar" style="height:26px;"></span><span class="bar" style="height:14px;"></span><span class="bar" style="height:22px;"></span><span class="bar" style="height:10px;"></span><span class="bar" style="height:18px;"></span><span class="bar" style="height:26px;"></span><span class="bar" style="height:14px;"></span><span class="bar" style="height:10px;"></span></span></div>
+
+  <h2 class="section-title" id="friday">Solstice Party - Original Longlist</h2>
   <p class="cat-intro">A major creative opportunity of the weekend - a standout performance that could become a focal point of the evening, something more background, or a combination of the two. It should feel atmospheric, elegant and in line with the striking surroundings <svg class="icon-inline" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#B7314F" stroke-width="2.2"><path d="M4 12h14M13 6l6 6-6 6"/></svg> <strong style="color:var(--cream);">See a summary below and click or keep scrolling for more detail.</strong></p>
 
   <div class="table-scroll">
@@ -472,20 +498,10 @@
 
   <div id="categories"></div>
 
-  <div class="divider" aria-hidden="true"><span class="wave"><span class="bar" style="height:10px;"></span><span class="bar" style="height:18px;"></span><span class="bar" style="height:26px;"></span><span class="bar" style="height:14px;"></span><span class="bar" style="height:22px;"></span><span class="bar" style="height:10px;"></span><span class="bar" style="height:18px;"></span><span class="bar" style="height:26px;"></span><span class="bar" style="height:14px;"></span><span class="bar" style="height:10px;"></span></span></div>
+      </div>
+  </details>
 
-  <h2 class="section-title" id="saturday">Saturday - Wedding Day</h2>
-  <p class="cat-intro">The wedding day offers a number of distinct moments for music and entertainment. Below is an initial collection of ideas and directions - some overlapping with Friday&rsquo;s concepts, others intended as inspiration for the ceremony, reception and celebrations that follow.</p>
-
-  <div class="table-scroll">
-    <div class="overview-table" id="saturday-overview"></div>
-  </div>
-
-  <div id="moments"></div>
-
-
-
-  <div class="divider" aria-hidden="true"><span class="wave"><span class="bar" style="height:10px;"></span><span class="bar" style="height:18px;"></span><span class="bar" style="height:26px;"></span><span class="bar" style="height:14px;"></span><span class="bar" style="height:22px;"></span><span class="bar" style="height:10px;"></span><span class="bar" style="height:18px;"></span><span class="bar" style="height:26px;"></span><span class="bar" style="height:14px;"></span><span class="bar" style="height:10px;"></span></span></div>
+<div class="divider" aria-hidden="true"><span class="wave"><span class="bar" style="height:10px;"></span><span class="bar" style="height:18px;"></span><span class="bar" style="height:26px;"></span><span class="bar" style="height:14px;"></span><span class="bar" style="height:22px;"></span><span class="bar" style="height:10px;"></span><span class="bar" style="height:18px;"></span><span class="bar" style="height:26px;"></span><span class="bar" style="height:14px;"></span><span class="bar" style="height:10px;"></span></span></div>
 
   <h2 class="section-title" id="next-steps">Partnership</h2>
 
@@ -700,7 +716,7 @@ const CATEGORIES = [
     artists:[
       {name:'Ayoub Sisters', scot:true, desc:"Scottish string duo who rose to stardom after their debut album premiered at No.1 in the Official Classical Chart, blending classical virtuosity with contemporary repertoire.", videos:[{id:'m7zot4NhTaQ'}]},
       {name:'Nicola Benedetti', scot:true, status:'tbc', format:'Solo violin, with accompaniment options',  desc:"Grammy Award-winning Scottish violinist celebrated for her exceptional musicianship and expressive performances.", videos:[{id:'JkwmqFcHN_0'}]},
-      {name:'Catrin Finch', scot:false, status:'tbc', altTag:true, format:'Solo harp, or duo with Seckou Keita',  desc:"One of the world's leading harpists, celebrated for collaborations spanning classical, Celtic folk and world music.", videos:[{id:'GXaSvxoa2pY'},{id:'urnm8Aync5s', start:112, caption:'With Seckou Keita'}]},
+      {name:'Catrin Finch', scot:false, status:'hold', holdDate:'Fri 18th June', format:'Solo harp',  desc:"One of the world's leading harpists and former Royal Harpist, celebrated for collaborations spanning classical, Celtic folk and world music.", videos:[{id:'GXaSvxoa2pY'},{id:'urnm8Aync5s', start:112, caption:'With Seckou Keita'}]},
       {name:'Okiem', scot:false, desc:"Pianist and composer creating cinematic contemporary classical music in the mould of Ludovico Einaudi, with headline shows at the Royal Albert Hall and with artists including John Legend and Prince.", videos:[{id:'sPe0XBEyKvc'}]},
     ],
     alternatives:[{name:'Ludovico Einaudi', url:'https://www.youtube.com/watch?v=Htk5IuW5JHE'},{name:'Andrea Bocelli', url:'https://www.youtube.com/watch?v=ZltPT1Xk3dw'}],
@@ -712,10 +728,11 @@ const CATEGORIES = [
     summaryDesc:'Contemporary folk, rooted in tradition with cinematic production',
     intro:"",
     artists:[
-      {name:"Filkin's Ensemble", scot:false, format:'13-piece: strings, wind, guitars, percussion and vocals',  status:'hold', desc:"A 13-piece <em>(down from 15)</em> contemporary folk ensemble blending chamber music and traditional folk. Rich harmonies and inventive arrangements create a sound that is intimate and deeply atmospheric.", videos:[{id:'Figx9edXjNI', start:82}]},
+      {name:"Filkin's Ensemble", scot:false, holdDate:'Sat 19th June', format:'13-piece: strings, wind, guitars, percussion and vocals',  status:'hold', desc:"A 13-piece <em>(down from 15)</em> contemporary folk ensemble blending chamber music and traditional folk. Rich harmonies and inventive arrangements create a sound that is intimate and deeply atmospheric.", videos:[{id:'Figx9edXjNI', start:82}]},
       {name:'Nathan Evans', scot:true, desc:"Scottish singer whose sea shanty rendition of Wellerman became a global phenomenon, reaching No.1 in multiple countries. Blending folk, country and pop influences, his performances are warm, rooted in Scottish storytelling but with a global appeal.", videos:[{id:'fK4TUttRic4'},{id:'wIBcHYNcgyg'}]},
-      {name:'Talisk', scot:true, format:'Trio (fiddle, concertina, guitar), seated',  status:'hold', desc:"Multiple BBC Radio 2 Folk Award winners, Talisk are one of the most exciting acts in contemporary Scottish folk, renowned for virtuosic playing, driving rhythms and innovative arrangements.", videos:[{id:'9481kEyAPM0'},{id:'9_chCAYpMzg', caption:'More upbeat show'}]},
-      {name:'RURA', scot:true, altTag:true, format:'Band: pipes, fiddle, guitar and bodhrán',  status:'tbc', desc:"A phenomenal Scottish band, deeply evocative of the Scottish landscape and culture. Winners of Live Act of the Year at the Scots Trad Music Awards and Celtic Connections favourites, they bring pipes, fiddle, guitar and bodhrán together in a sound that is powerful and emotive. Their latest album, with fiddle stepping in after the departure of their singer, really resonates with a sense of place.", videos:[{id:'QgU5taBcsjM', start:290, caption:'Live', photo:RURA_IMG},{spotifyAlbum:'7zqZjoz3JgqDbFA5qkCvFc', caption:'Spotify: Latest Album', photo:RURA_IMG}]},
+      {name:'Catriona McKay & Chris Stout', scot:true, notInLonglist:true, status:'hold', holdDate:'Fri 18th June', format:'Duo: Scottish harp (clàrsach) &amp; Shetland fiddle',  desc:"Among the most celebrated partnerships in Scottish traditional music, the BBC Radio 2 Folk Award-winning duo bring a distinctive contemporary sound, described by The Herald as playing &ldquo;at a rarefied level of expertise&rdquo;. They also had the first-ever concerto for Scottish harp and fiddle written for them.", videos:[{id:'MA7kEhCzRGA'}]},
+      {name:'Talisk', scot:true, holdDate:'Sat 19th June', format:'Trio (fiddle, concertina, guitar), seated',  status:'hold', desc:"Multiple BBC Radio 2 Folk Award winners, Talisk are one of the most exciting acts in contemporary Scottish folk, renowned for virtuosic playing, driving rhythms and innovative arrangements.", videos:[{id:'9481kEyAPM0'},{id:'9_chCAYpMzg', caption:'More upbeat show'}]},
+      {name:'RURA', scot:true, holdDate:'Sat 19th June', format:'Band: pipes, fiddle, guitar and bodhrán',  status:'request', desc:"A phenomenal Scottish band, deeply evocative of the Scottish landscape and culture. Winners of Live Act of the Year at the Scots Trad Music Awards and Celtic Connections favourites, they bring pipes, fiddle, guitar and bodhrán together in a sound that is powerful and emotive. Their latest album, with fiddle stepping in after the departure of their singer, really resonates with a sense of place.", videos:[{id:'QgU5taBcsjM', start:290, caption:'Live', photo:RURA_IMG},{spotifyAlbum:'7zqZjoz3JgqDbFA5qkCvFc', caption:'Spotify: Latest Album', photo:RURA_IMG}]},
       {name:'Elephant Sessions', scot:true, desc:"Scottish folk band fusing traditional melodies with funk, electronica and rock influences. Renowned for their high-energy live performances and bold, contemporary sound.", videos:[{id:'d99_gESG-u8'}]},
     ],
   },
@@ -727,7 +744,7 @@ const CATEGORIES = [
     intro:"",
     artists:[
       {name:'The Swingles', scot:false, desc:"Grammy Award-winning vocal ensemble celebrated for virtuosic a cappella performances spanning classical, jazz and contemporary music.", videos:[{id:'uN4OvPrUmrc', caption:'Live with the Ayoub Sisters'}]},
-      {name:'Anúna Collective', scot:false, format:'12-person mixed choir, staged and/or roaming',  status:'hold', more:{title:'The Anúna Experience', items:['<strong>Modern ritual:</strong> Exceptional choral singing combined with movement through the space. Singers leave the stage to chant and sing among the audience, creating an intimate, immersive experience guests rarely forget.','<strong>How an hour might unfold:</strong> Lights dim as a single voice begins a ninth-century chant from within the audience. Singers enter from all points of the space as a drone fills the room, before the men take the stage for the rapid-fire Irish song <em>Dúlamán</em>. The set then moves between full choir, solos and smaller groups.','<strong>A Scottish connection:</strong> A highlight is <em>Jerusalem</em>, sung in heterophony - a &quot;not singing together&quot; style still practised in the Western Isles - as the women process through the audience. Plus Gaelic mouth music such as <em>Fionnghuala</em>.','<strong>Built for unusual spaces:</strong> Developed for cathedrals and processional spaces, the format adapts to any setting - from a marquee at Château Lynch-Bages to 2,000m up in the Dolomites and Irish stone circles. Acoustic or amplified, with headsets for larger or outdoor spaces.','<strong>Credentials:</strong> Featured on Grammy-winning recordings (<em>Riverdance</em>, The Chieftains&#39; <em>The Long Journey Home</em>) and Classical Brit nominated.','<span class="more-note">Some of the videos below were filmed for a 2007 TV special. Private performances keep the same immersive approach, typically with 12 singers.</span>']}, desc:"Founded by Irish composer and conductor Michael McGlynn, internationally recognised for creating contemporary choral music inspired by Celtic traditions, combining ancient influences with a modern sensibility to create extraordinary music. Below: puirt à beul, a traditional form of Scottish Gaelic 'mouth music' where lively vocal rhythms are used to mimic instruments.", videos:[{id:'OM8Uv5RFOyM', start:7, caption:'Fionnghuala'},{id:'_29voZgX7-Q', caption:"Annie's Song"},{id:'Fs2sSf_rsGI', caption:'Illumination'}]},
+      {name:'Anúna Collective', scot:false, holdDate:'Sat 19th June', format:'12-person mixed choir, staged and/or roaming',  status:'hold', more:{title:'The Anúna Experience', items:['<strong>Modern ritual:</strong> Exceptional choral singing combined with movement through the space. Singers leave the stage to chant and sing among the audience, creating an intimate, immersive experience guests rarely forget.','<strong>How an hour might unfold:</strong> Lights dim as a single voice begins a ninth-century chant from within the audience. Singers enter from all points of the space as a drone fills the room, before the men take the stage for the rapid-fire Irish song <em>Dúlamán</em>. The set then moves between full choir, solos and smaller groups.','<strong>A Scottish connection:</strong> A highlight is <em>Jerusalem</em>, sung in heterophony - a &quot;not singing together&quot; style still practised in the Western Isles - as the women process through the audience. Plus Gaelic mouth music such as <em>Fionnghuala</em>.','<strong>Built for unusual spaces:</strong> Developed for cathedrals and processional spaces, the format adapts to any setting - from a marquee at Château Lynch-Bages to 2,000m up in the Dolomites and Irish stone circles. Acoustic or amplified, with headsets for larger or outdoor spaces.','<strong>Credentials:</strong> Featured on Grammy-winning recordings (<em>Riverdance</em>, The Chieftains&#39; <em>The Long Journey Home</em>) and Classical Brit nominated.','<span class="more-note">Some of the videos below were filmed for a 2007 TV special. Private performances keep the same immersive approach, typically with 12 singers.</span>']}, desc:"Founded by Irish composer and conductor Michael McGlynn, internationally recognised for creating contemporary choral music inspired by Celtic traditions, combining ancient influences with a modern sensibility to create extraordinary music. Below: puirt à beul, a traditional form of Scottish Gaelic 'mouth music' where lively vocal rhythms are used to mimic instruments.", videos:[{id:'OM8Uv5RFOyM', start:7, caption:'Fionnghuala'},{id:'_29voZgX7-Q', caption:"Annie's Song"},{id:'Fs2sSf_rsGI', caption:'Illumination'}]},
       {name:'Spokanki', scot:false, desc:"Contemporary vocal ensemble reimagining European folk through striking a cappella arrangements, movement and rich vocal harmonies. Here's a collaboration with Michael McGlynn, mentioned above.", videos:[{id:'qmKc0YlrqOI'}]},
     ],
   },
@@ -918,7 +935,7 @@ function artistCard(a){
       </div>
       
     </div>
-    ${a.status ? `<div class="status-row"><p class="artist-status ${a.status}">${CAL_ICON} ${a.status==='hold' ? 'Available &amp; On Hold' : 'Availability Not Confirmed'}</p>${a.altTag ? `<p class="artist-status alt-tag">Alternative Option</p>` : ''}</div>` : ''}
+    ${a.status ? `<div class="status-row"><p class="artist-status ${a.status==='request'?'hold':a.status}">${CAL_ICON} ${a.status==='hold' ? 'Available &amp; On Hold' : a.status==='request' ? 'Available, Hold on Request' : 'Availability Not Confirmed'}${a.holdDate && a.status!=='tbc' ? ` - ${a.holdDate}` : ''}</p>${a.altTag ? `<p class="artist-status alt-tag">Alternative Option</p>` : ''}</div>` : ''}
     <p class="desc">${a.desc}</p>
     ${a.more ? `<details class="terms-accordion artist-more"><summary>${a.more.title} <svg width="12" height="12" viewBox="0 0 10 10" aria-hidden="true"><path d="M1 3 L5 7 L9 3" stroke="currentColor" stroke-width="1.4" fill="none"/></svg></summary><ul>${a.more.items.map(i=>`<li>${i}</li>`).join('')}</ul></details>` : ''}
     ${a.format ? `<p class="artist-meta"><strong>Format:</strong> ${a.format}</p>` : ''}
@@ -1011,30 +1028,43 @@ function renderMoment(m){
 
 // Friday shortlist: pull these artists out of the longlist and show them by running-order moment
 const SHORTLIST_MOMENTS = [
-  {label:'Guest Arrival / Reception / Dinner', artists:['Anúna Collective',"Filkin's Ensemble",'Talisk','RURA','Nicola Benedetti','Catrin Finch'], note:'Further alternatives, including Duncan Chisholm and Catriona McKay &amp; Chris Stout, available to explore upon request.'}
+  {target:'shortlist-friday', label:'Guest Arrival / Reception', artists:['Catrin Finch','Catriona McKay & Chris Stout','Nicola Benedetti'], note:'Further alternatives, including Duncan Chisholm, available to explore upon request.'},
+  {target:'shortlist-saturday', label:'Guest Arrival / Reception / Dinner', artists:['Anúna Collective',"Filkin's Ensemble",'Talisk','RURA']}
 ];
-CATEGORIES.forEach(c=>{ c.overviewArtists = c.artists.slice(); });
+CATEGORIES.forEach(c=>{ c.overviewArtists = c.artists.filter(a=>!a.notInLonglist); });
 function takeArtist(name){
   for (const c of CATEGORIES){ const i = c.artists.findIndex(a=>a.name===name); if (i>-1) return c.artists.splice(i,1)[0]; }
 }
-const shortlistHTML = SHORTLIST_MOMENTS.map(m=>{
+SHORTLIST_MOMENTS.forEach(m=>{
   const main = m.artists.map(takeArtist).filter(Boolean);
   const alts = (m.alternatives||[]).map(takeArtist).filter(Boolean);
-  return `<div class="shortlist-moment">
+  document.getElementById(m.target).innerHTML += `<div class="shortlist-moment">
     <p class="cat-tag">${m.label}${m.when ? ` <span class="when">${m.when}</span>` : ''}</p>
     <div class="artist-grid">${main.map(artistCard).join('')}</div>
     ${alts.length ? `<div class="collab-divider">Alternative</div><div class="artist-grid">${alts.map(artistCard).join('')}</div>` : ''}
     ${m.note ? `<p class="shortlist-note">${m.note}</p>` : ''}
   </div>`;
-}).join('');
-document.getElementById('shortlist-moments').innerHTML = shortlistHTML;
+});
 document.getElementById('categories').innerHTML = CATEGORIES.map(renderCategory).join('');
 document.getElementById('moments').innerHTML = SATURDAY.map(renderMoment).join('');
 
 // Content is built by script, so jump to any #link once it exists (and again after media loads)
+function revealTarget(id){
+  const el = document.getElementById(id);
+  if(!el) return null;
+  let d = el.closest('details.longlist-collapse');
+  if(d && !d.open) d.open = true;
+  return el;
+}
+document.addEventListener('click', e=>{
+  const a = e.target.closest('a[href^="#"]');
+  if(!a) return;
+  const id = decodeURIComponent(a.getAttribute('href').slice(1));
+  if(id) revealTarget(id);
+}, true);
 function jumpToHash(){
   if(!location.hash) return;
-  const el = document.getElementById(decodeURIComponent(location.hash.slice(1)));
+  const el = revealTarget(decodeURIComponent(location.hash.slice(1)));
   if(el) el.scrollIntoView();
 }
 jumpToHash();
@@ -1067,8 +1097,8 @@ document.getElementById('saturday-overview').innerHTML =
    <div class="cell">${ideasCellHTML(m)}</div>`).join('');
 
 /* ---- nav dropdowns ---- */
-document.getElementById('fridayPanel').innerHTML = `<a href="#shortlist">Shortlist</a><a href="#friday">Original Longlist</a>` + CATEGORIES.map(c=>`<a href="#${c.id}">${c.title.split('&times;')[0].split('(')[0].trim()}</a>`).join('');
-document.getElementById('saturdayPanel').innerHTML = `<a href="#saturday">Overview</a>` + SATURDAY.map(m=>`<a href="#${m.id}">${m.title}</a>`).join('');
+document.getElementById('fridayPanel').innerHTML = `<a href="#shortlist">Wedding Day Shortlist</a><a href="#saturday">Original Ideas</a>` + SATURDAY.map(m=>`<a href="#${m.id}">${m.title}</a>`).join('');
+document.getElementById('saturdayPanel').innerHTML = `<a href="#saturday-shortlist">Solstice Party Shortlist</a><a href="#friday">Original Longlist</a>` + CATEGORIES.map(c=>`<a href="#${c.id}">${c.title.split('&times;')[0].split('(')[0].trim()}</a>`).join('');
 
 function setupDropdown(toggleId, panelId){
   const toggle = document.getElementById(toggleId);
