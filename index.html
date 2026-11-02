@@ -950,7 +950,7 @@ function artistCard(a){
 }
 
 function featureHTML(f){
-  return `<div class="artist-card" id="artist-${slug(f.name)}" data-artist-section style="max-width:480px;">
+  return `<div class="artist-card" id="artist-${slug(f.name)}" data-artist-section>
     <div class="artist-name-row">
       <div class="artist-name-main">
         <span class="artist-name">${f.name}</span>${f.scot ? SALTIRE : ''}
@@ -1017,12 +1017,12 @@ function renderMoment(m){
   }
 
   if(m.feature){
-    html += `<div class="artist-grid" style="margin-top:18px;">${featureHTML(m.feature)}</div>`;
+    html += `<div class="artist-grid compact" style="margin-top:18px;">${featureHTML(m.feature)}</div>`;
   }
 
   if(m.artists && m.artists.length){
     html += `<div class="collab-divider">Artists to Explore</div>`;
-    html += `<div class="artist-grid">${m.artists.map(artistCard).join('')}</div>`;
+    html += `<div class="artist-grid compact">${m.artists.map(artistCard).join('')}</div>`;
   }
 
   html += `</section>`;
