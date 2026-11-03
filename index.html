@@ -1035,7 +1035,7 @@ function renderMoment(m){
 
 // Friday shortlist: pull these artists out of the longlist and show them by running-order moment
 const SHORTLIST_MOMENTS = [
-  {target:'shortlist-friday', label:'Guest Arrival / Reception', artists:['Catrin Finch','Catriona McKay & Chris Stout','Nicola Benedetti'], note:'Further alternatives, including Duncan Chisholm, available to explore upon request.'},
+  {target:'shortlist-friday', label:'Guest Arrival / Reception', artists:['Catrin Finch','Catriona McKay & Chris Stout'], note:'Further alternatives, including Duncan Chisholm, available to explore upon request.'},
   {target:'shortlist-saturday', label:'Guest Arrival / Reception / Dinner', artists:['Anúna Collective',"Filkin's Ensemble",'Talisk','RURA']}
 ];
 CATEGORIES.forEach(c=>{ c.overviewArtists = c.artists.filter(a=>!a.notInLonglist); });
