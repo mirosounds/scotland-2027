@@ -583,23 +583,57 @@
 
 <script>
 /* ============================================================
-   GA4 Measurement ID: same stream this proposal used before
-   (carried over from the original Scotland file).
+   TRACKING v2 (Nov 2026) - shared "Miro Sounds Proposals" GA4 property,
+   one stream for all of go.mirosounds.com. Every event carries
+   proposal_name so reports split by proposal.
+   - Link-preview bots / headless browsers are not tracked.
+   - Rory's own devices are tagged traffic_type=internal (excluded by the
+     property's Active internal-traffic filter, alongside the IP rule).
    ============================================================ */
-const GA_MEASUREMENT_ID = 'G-FRMS66W3JP';
+const GA_MEASUREMENT_ID = 'G-7X9YMF6YBP';
+const PROPOSAL_NAME = "LLE Scotland 2027";
+const IS_BOT = (function(){
+  try { return navigator.webdriver === true || /bot|crawl|spider|slurp|headless|preview|facebookexternalhit|whatsapp|telegram|discord|slack|skype|linkedin|embedly|pinterest|bitly|outbrain|vkshare/i.test(navigator.userAgent || ''); } catch(e){ return false; }
+})();
+function isOwner(name, company){
+  return /^\s*rory\s+macinnes\s*$/i.test(name || '') || /miro\s*sounds/i.test(company || '');
+}
+const IS_INTERNAL = (function(){
+  try {
+    if (localStorage.getItem('miro_internal') === '1') return true;
+    for (let i = 0; i < localStorage.length; i++) {
+      const k = localStorage.key(i);
+      if (k && k.indexOf('miro_lead_') === 0) {
+        const d = JSON.parse(localStorage.getItem(k) || '{}');
+        if (isOwner([d.firstName, d.lastName].filter(Boolean).join(' '), d.business)) { localStorage.setItem('miro_internal','1'); return true; }
+      }
+    }
+  } catch(e){}
+  return false;
+})();
 window.dataLayer = window.dataLayer || [];
 function gtag(){ dataLayer.push(arguments); }
-(function(){
-  const s = document.createElement('script');
-  s.async = true;
-  s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_MEASUREMENT_ID;
-  document.head.appendChild(s);
-})();
-gtag('js', new Date());
-gtag('config', GA_MEASUREMENT_ID, { page_title: 'LLE Scotland 2027 Proposal' });
+if (!IS_BOT) {
+  (function(){
+    const s = document.createElement('script');
+    s.async = true;
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_MEASUREMENT_ID;
+    document.head.appendChild(s);
+  })();
+  gtag('js', new Date());
+  const cfg = { page_title: PROPOSAL_NAME, proposal_name: PROPOSAL_NAME };
+  if (IS_INTERNAL) cfg.traffic_type = 'internal';
+  gtag('config', GA_MEASUREMENT_ID, cfg);
+}
+function markOwnerDevice(name, company){
+  if (!isOwner(name, company)) return;
+  try { localStorage.setItem('miro_internal','1'); } catch(e){}
+  gtag('set', { traffic_type: 'internal' });
+}
 
 function trackEvent(name, params){
-  gtag('event', name, params);
+  if (IS_BOT) return;
+  gtag('event', name, Object.assign({ proposal_name: PROPOSAL_NAME }, params || {}));
 }
 
 /* ============================================================
@@ -662,8 +696,9 @@ function getVisitorName(){
     const business = document.getElementById('leadBusiness').value.trim();
     if (!firstName || !lastName || !business) return;
     try { localStorage.setItem(LEAD_STORAGE_KEY, JSON.stringify({firstName:firstName,lastName:lastName,business:business,ts:Date.now()})); } catch(err){}
+    markOwnerDevice([firstName, lastName].filter(Boolean).join(' '), business);
     trackEvent('lead_gate_submit', { business: business });
-    submitToEndpoint({ type:'lead_gate', first_name:firstName, last_name:lastName, business:business, ts:Date.now() });
+    submitToEndpoint({ proposal: PROPOSAL_NAME, type:'lead_gate', first_name:firstName, last_name:lastName, business:business, ts:Date.now() });
     gate.style.display = 'none';
     document.body.style.overflow = '';
   });
@@ -1140,7 +1175,7 @@ document.querySelectorAll('.rating-row').forEach(function(row){
 
   function sendRating(rating, comment){
     trackEvent('artist_rating', { artist_name: artistName, rating: rating, has_comment: !!comment });
-    submitToEndpoint({ type:'artist_rating', artist: artistName, rating: rating, comment: comment || '', visitor_name: getVisitorName(), ts: Date.now() });
+    submitToEndpoint({ proposal: PROPOSAL_NAME, type:'artist_rating', artist: artistName, rating: rating, comment: comment || '', visitor_name: getVisitorName(), ts: Date.now() });
     thanks.style.display = 'block';
   }
 
